@@ -10,12 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 01 checkOut
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
       - name: 02 use NodeJS
-      - uses: actions/setup-node@v3
+        uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: npm ci
-      - run: npm test
-
+      - name: 03 npm ci
+        run: npm ci
+      - name: 04 npm test의 문제점은?
+        run: echo "문제점이 여기에 작성되어야 합니다."
 
