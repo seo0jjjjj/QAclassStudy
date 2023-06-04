@@ -7,8 +7,8 @@ describe('jestTest', () => {
 
     test('try Catch Test', async () => {
         try {
-            //await fetchData();
-            await fetchDataError();
+            await fetchData().expect('get');
+            //await fetchDataError();
         } catch (e) {
             expect(e).toMatch('bye');
         }
@@ -30,5 +30,5 @@ describe('jestTest', () => {
         }
         callback(done);
     });
-    
+
 });
