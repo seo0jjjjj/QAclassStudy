@@ -18,5 +18,5 @@ jobs:
       - name: 03 npm ci
         run: npm ci
       - name: 04 npm test의 문제점은?
-        run: echo "문제점이 여기에 작성되어야 합니다."
+        run: npm test
 
