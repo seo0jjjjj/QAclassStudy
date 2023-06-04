@@ -2,9 +2,11 @@
 name: CI_CD_테스트
 
 on:
+  pull_request:
+    branches: [ "main" ]
   push:
     branches: [ "main" ]
-
+    
 jobs:
   TEST:
     runs-on: ubuntu-latest
