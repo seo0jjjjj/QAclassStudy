@@ -1,0 +1,21 @@
+
+name: CI_CD_테스트
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  TEST:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 01 checkOut
+      - uses: actions/checkout@v3
+      - name: 02 use NodeJS
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm ci
+      - run: npm test
+
+
