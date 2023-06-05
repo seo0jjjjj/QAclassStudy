@@ -25,4 +25,4 @@ jobs:
         SECRETS_CONTEXT: ${{ toJson(secrets) }}
     steps:
         - name: is Done!
-        - run: echo "test is done ${SECRETS_CONTEXT}"
+          run: echo "test is done ${SECRETS_CONTEXT}"
