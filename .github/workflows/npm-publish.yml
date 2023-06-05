@@ -17,3 +17,12 @@ jobs:
           node-version: 16
       - run: npm ci
       - run: npm test
+  
+  test02:
+    runs-on: ubuntu-latest
+    needs: [test01]
+    env:
+        SECRETS_CONTEXT: ${{ toJson(secrets) }}
+    steps:
+        - name: is Done!
+        - run: echo "test is done ${SECRETS_CONTEXT}"
