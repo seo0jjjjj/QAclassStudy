@@ -7,8 +7,8 @@ describe('jestTest', () => {
 
     test('try Catch Test', async () => {
         try {
-            //await fetchData().expect('get');
-            await fetchDataError();
+            await fetchData().expect('get');
+            //await fetchDataError();
         } catch (e) {
             expect(e).toMatch('bye');
         }
@@ -24,8 +24,8 @@ describe('jestTest', () => {
         expect(true).toBeTruthy();
     });
     test(`callback Test`, (done) => {
-        function callback(end){
-            fetchData().then(data=>expect(data).toBe(`hello`));
+        function callback(end) {
+            fetchData().then(data => expect(data).toBe(`hello`));
             end();
         }
         callback(done);
