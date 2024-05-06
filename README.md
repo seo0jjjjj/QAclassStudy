@@ -1,3 +1,7 @@
 # QAclassStudy
 
-hello world!s
+hello world!
+
+bye world!
+
+rehi world!
